@@ -20,7 +20,7 @@ namespace ConsoleApp9
                     Company company1 = new Company { Name = "Microsoft" };
                     Company company2 = new Company { Name = "Google" };
 
-                    Employee emp1 = new Employee { FullName = "Ігор", Company = company1 };
+                    Employee emp1 = new Employee { FullName = "Игорь", Company = company1 };
                     Employee emp2 = new Employee { FullName = "Ольга", Company = company1 };
                     Employee emp3 = new Employee { FullName = "Степан", Company = company2 };
 
@@ -41,7 +41,7 @@ namespace ConsoleApp9
                     db.SaveChanges();
                 }
 
-                Console.Write("Введіть назву компанії: ");
+                Console.Write("Введите название компании ");
                 string companyName = Console.ReadLine();
 
                 var projects = db.Employees
@@ -50,7 +50,7 @@ namespace ConsoleApp9
                     .Distinct()
                     .ToList();
 
-                Console.WriteLine("Проєкти:");
+                Console.WriteLine("Проекты:");
 
                 foreach (var project in projects)
                 {
